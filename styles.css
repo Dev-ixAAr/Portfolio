@@ -1,0 +1,165 @@
+body {
+    background-color: #1e1e1e;
+    color: #d4d4d4;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 80%;
+    max-width: 800px;
+    flex-grow: 1;
+    /* Allow the container to grow */
+}
+
+.terminal {
+    background-color: #252526;
+    border-radius: 5px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+    /* Space between terminal and footer */
+}
+
+.output {
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+}
+
+.input-line {
+    display: flex;
+}
+
+.prompt {
+    color: #00ff00;
+}
+
+.input {
+    color: #ffffff;
+    min-width: 100px;
+}
+
+/* Footer styles */
+footer {
+    background-color: #1e1e1e;
+    color: #d4d4d4;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-content {
+    margin: 0 auto;
+}
+
+.footer-content p {
+    margin: 5px 0;
+}
+
+.footer-content ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-content li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.footer-content a {
+    color: #00ff00;
+    text-decoration: none;
+}
+
+.footer-content a:hover {
+    text-decoration: underline;
+}
+
+/* Existing styles... */
+
+.profile-pic {
+    display: block;
+    /* Make the image a block element */
+    width: 150px;
+    /* Adjust the size as needed */
+    height: auto;
+    /* Maintain aspect ratio */
+    border-radius: 50%;
+    /* Make it circular */
+    filter: grayscale(100%);
+    /* Make the image black and white */
+    margin: 0 auto 20px;
+    margin-top: 120px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    /* Center the image and add space below */
+}
+
+/* 
+m {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: #d4d4d4;
+    pointer-events: none;
+    animation: animate 2s linear forwards;
+    border-radius: 10px;
+}
+
+@keyframes animate {
+    0% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(var(--x), var(--y));
+    }
+}
+ */
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .profile-pic {
+        width: 120px;
+        /* Smaller image on smaller screens */
+    }
+
+    .terminal {
+        padding: 15px;
+        /* Reduce padding */
+    }
+
+    .footer-content li {
+        display: block;
+        /* Stack footer links vertically */
+        margin: 5px 0;
+        /* Add margin for spacing */
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-pic {
+        width: 100px;
+        /* Even smaller image on very small screens */
+    }
+
+    .terminal {
+        padding: 10px;
+        /* Further reduce padding */
+    }
+
+    .input {
+        min-width: 80px;
+        /* Adjust input width */
+    }
+}

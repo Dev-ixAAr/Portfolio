@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <img src="./assets/me.jpg" alt="Your Name" class="profile-pic">
+        <div class="terminal">
+            <div class="output" id="output"></div>
+            <div class="input-line">
+                <span class="prompt">></span>
+                <span id="input" class="input"></span>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <p>Connect with me:</p>
+            <ul>
+                <li><a href="https://github.com/Dev-ixAAr" target="_blank">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/benushika-ishra/" target="_blank">LinkedIn</a></li>
+                <li><a href="https://t.me/Mr_Dev_ixAAr">Telegram</a></li>
+            </ul>
+            <p style="font-size: 10px;">&copy; 2025 Dev ixAAr. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <!-- Custom cursor movement -->
+    <script>
+        function spark(event) {
+            let m = document.createElement('m');
+            m.style.left = (event.pageX) + 'px';
+            m.style.top = (event.pageY) + 'px';
+            m.style.scale = `${Math.random() * 2 + 1}`;
+            m.style.setProperty('--x', getRandomTransitionValue());
+            m.style.setProperty('--y', getRandomTransitionValue());
+            document.body.appendChild(m);
+
+            setTimout(() => {
+                document.body.removeChild(m);
+            }, 2000)
+        }
+
+        function getRandomTransitionValue() {
+            return `${Math.random() * 400 - 200}px`;
+        }
+
+        document.addEventListener('mousemove', spark)
+    </script>
+</body>
+
+</html>
